@@ -6,6 +6,7 @@ import {
 	Mail,
 	Newspaper,
 	ScrollText,
+	Trophy,
 	UserRound,
 } from "lucide-react";
 import portrait from "@/assets/louis-etienne_messier.png";
@@ -29,23 +30,54 @@ const school = [
 		title: "Bachelor in Software Engineering",
 		place: "Laval University, Quebec City",
 		years: "2023-2027",
-		detail: ""
+		detail: "",
 	},
 	{
 		title: "Computer Science & Mathematics",
 		place: "CEGEP of Sherbrooke, Sherbrooke",
 		years: "2021-2023",
-		detail: ""
+		detail: "",
 	},
 ];
 
-const papers: { title: string; detail: string }[] = [
+const papers: { title: string; years: string; detail: string }[] = [];
 
-];
+const jobs: { title: string; place: string; years: string; detail: string }[] =
+	[];
 
-const jobs: { title: string; place: string; detail: string }[] = [
+const extracurricular: {
+	title: string;
+	place: string;
+	years: string;
+	detail: string;
+}[] = [];
 
-];
+function Entry({
+	title,
+	place,
+	years,
+	detail,
+}: {
+	title: string;
+	place?: string;
+	years?: string;
+	detail?: string;
+}) {
+	return (
+		<div>
+			<div className="flex items-baseline justify-between gap-3">
+				<p className="font-display font-bold text-[#2a3f73]">{title}</p>
+				{years && (
+					<p className="shrink-0 font-sans text-[12px] text-[#6f5a3a] tabular-nums">
+						{years}
+					</p>
+				)}
+			</div>
+			{place && <p className="text-[13px] text-[#6f5a3a]">{place}</p>}
+			{detail && <p>{detail}</p>}
+		</div>
+	);
+}
 
 export const Route = createFileRoute("/about/")({
 	component: AboutPage,
@@ -129,20 +161,7 @@ function AboutPage() {
 
 				<Section icon={<GraduationCap />} title="School">
 					{school.map((entry) => (
-						<div key={entry.title}>
-							<div className="flex items-baseline justify-between gap-3">
-								<p className="font-display font-bold text-[#2a3f73]">
-									{entry.title}
-								</p>
-								{entry.years && (
-									<p className="shrink-0 font-sans text-[12px] text-[#6f5a3a] tabular-nums">
-										{entry.years}
-									</p>
-								)}
-							</div>
-							<p className="text-[13px] text-[#6f5a3a]">{entry.place}</p>
-							<p>{entry.detail}</p>
-						</div>
+						<Entry key={entry.title} {...entry} />
 					))}
 				</Section>
 
@@ -150,14 +169,7 @@ function AboutPage() {
 					{papers.length === 0 ? (
 						<p>No papers yet.</p>
 					) : (
-						papers.map((entry) => (
-							<div key={entry.title}>
-								<p className="font-display font-bold text-[#2a3f73]">
-									{entry.title}
-								</p>
-								<p>{entry.detail}</p>
-							</div>
-						))
+						papers.map((entry) => <Entry key={entry.title} {...entry} />)
 					)}
 				</Section>
 
@@ -165,14 +177,16 @@ function AboutPage() {
 					{jobs.length === 0 ? (
 						<p>No jobs listed yet.</p>
 					) : (
-						jobs.map((entry) => (
-							<div key={entry.title}>
-								<p className="font-display font-bold text-[#2a3f73]">
-									{entry.title}
-								</p>
-								<p className="text-[13px] text-[#6f5a3a]">{entry.place}</p>
-								<p>{entry.detail}</p>
-							</div>
+						jobs.map((entry) => <Entry key={entry.title} {...entry} />)
+					)}
+				</Section>
+
+				<Section icon={<Trophy />} title="Extracurricular">
+					{extracurricular.length === 0 ? (
+						<p>Nothing listed yet.</p>
+					) : (
+						extracurricular.map((entry) => (
+							<Entry key={entry.title} {...entry} />
 						))
 					)}
 				</Section>

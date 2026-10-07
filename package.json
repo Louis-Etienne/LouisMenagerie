@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "frontend",
   "private": true,
   "type": "module",
@@ -14,10 +13,6 @@
     "format": "biome format",
     "lint": "biome lint",
     "check": "biome check"
-=======
-  "scripts": {
-    "start": "node server.js"
->>>>>>> a51dbb09a2d0d33d6a5e0fcaed9735bc630b54db
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

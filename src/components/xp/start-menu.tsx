@@ -174,7 +174,7 @@ export function StartMenu() {
 								render={(props) => (
 									<a
 										{...props}
-										href="https://github.com/LouisTheBest1231"
+										href="https://github.com/Louis-Etienne"
 										target="_blank"
 										rel="noreferrer"
 									/>
