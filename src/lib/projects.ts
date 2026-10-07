@@ -43,7 +43,7 @@ export interface Project {
 	learned?: string[];
 	tech: string[];
 	context?: string;
-	status: "released" | "school" | "in-progress";
+	status: "personnal" | "school" | "in-progress";
 	year: string;
 	media?: ProjectMedia[];
 }
@@ -102,7 +102,7 @@ export const projects: Project[] = [
 		title: "BlackJack Coop",
 		category: "games",
 		tagline: "Black Jack, but, like, coop…",
-		status: "released",
+		status: "personnal",
 		year: "2021",
 		tech: ["Qt", "C++", "TCP networking", "Client/Server"],
 		summary: [
@@ -172,7 +172,7 @@ export const projects: Project[] = [
 		title: "N-B-A 2k20",
 		category: "games",
 		tagline: "2K don't sue me please",
-		status: "released",
+		status: "personnal",
 		year: "2019",
 		tech: ["Processing", "Box2D"],
 		summary: [
@@ -187,7 +187,7 @@ export const projects: Project[] = [
 		title: "The Boring RPG",
 		category: "games",
 		tagline: "Yeah, the game isn't thrilling",
-		status: "released",
+		status: "personnal",
 		year: "2020",
 		tech: ["Processing", "Gimp", "Procedural generation"],
 		summary: [
@@ -202,7 +202,7 @@ export const projects: Project[] = [
 		title: "Testing DirectX11",
 		category: "softwares",
 		tagline: "Tests! Woohoo!",
-		status: "released",
+		status: "personnal",
 		year: "2021",
 		tech: ["C++", "DirectX 11", "Win32", "HLSL"],
 		summary: [
@@ -270,7 +270,7 @@ export const projects: Project[] = [
 		title: "Louis' Menagerie",
 		category: "websites",
 		tagline: "The previous version of this portfolio",
-		status: "released",
+		status: "personnal",
 		year: "2023",
 		tech: ["React", "React Router", "Express"],
 		summary: [
@@ -283,7 +283,7 @@ export const projects: Project[] = [
 		title: "Snake!!",
 		category: "console",
 		tagline: "Every programmer eventually makes this game :)",
-		status: "released",
+		status: "personnal",
 		year: "2019",
 		tech: ["C#", ".NET", "Visual Studio"],
 		summary: [
@@ -295,7 +295,7 @@ export const projects: Project[] = [
 		title: "Calculator",
 		category: "console",
 		tagline: "Do I really need to describe what a calculator is?",
-		status: "released",
+		status: "personnal",
 		year: "2018",
 		tech: ["C#", ".NET", "Parsing"],
 		summary: [
@@ -307,7 +307,7 @@ export const projects: Project[] = [
 		title: "Hangman",
 		category: "console",
 		tagline: "Save the poor guy!",
-		status: "released",
+		status: "personnal",
 		year: "2018",
 		tech: ["C#", ".NET"],
 		summary: [

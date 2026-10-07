@@ -40,7 +40,7 @@ export const parchmentCard =
 	"rounded-[3px] bg-[#f8efd6]/75 shadow-[2px_3px_0_rgb(110_80_30/0.12)] ring-[#c6b083]";
 
 const statusLabel: Record<Project["status"], string> = {
-	released: "Released",
+	personnal: "Personnal Project",
 	school: "School project",
 	"in-progress": "Work in progress",
 };
